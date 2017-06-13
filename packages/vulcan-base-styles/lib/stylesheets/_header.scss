@@ -1,6 +1,7 @@
 .header-wrapper{
-  background: $header-bg;
+  background: #fff;
   margin-bottom: $vmargin;
+  border-bottom: 1px solid #efefef;
 }
 
 .header{
@@ -45,7 +46,7 @@
   }
   @include medium-large{
     .nav-user{
-      margin-right: $hmargin;
+      margin-left: 30px;
     }
   }
   .nav-new-post{

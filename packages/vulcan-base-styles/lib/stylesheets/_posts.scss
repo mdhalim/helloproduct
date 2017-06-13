@@ -91,12 +91,16 @@
   @include medium-large{
     @include flex-center;
   }
-  border-bottom: $border;
-  padding: $vmargin 5px;
+  //border-bottom: $border;
+  padding: 10px 5px;
   // margin-bottom: 15px;
   &.posts-sticky{
     background: $light-yellow;
 
+  }
+
+  &:hover {
+    background: none repeat scroll 0% 0% #FCF5E2;
   }
 }
 
@@ -109,13 +113,24 @@
   }
 }
 
+
+.upvoted .upvote-button {
+      
+}
 .upvote-button{
   @include border;
   @include border-radius;
   @include flex-center;
   flex-direction: column;
   justify-content: center;
-  padding: 3px 5px;
+  background: none repeat scroll 0% 0% #f2f2f2;
+      box-shadow: 0px 1px 0px 0px rgba(83, 69, 64, 0.3), 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px 10px;
+      width: 50px;
+    margin: 10px 25px 10px 0px;
+    height: 80px;
+
+
   .icon{
     text-align: center;
     display: block;
@@ -125,11 +140,24 @@
     display: block;
   }
   .voted &{
-    color: $light-text;
+    //color: $light-text;
+    background-color: #0275d8 !important;
+    color: #fff!important;
+
+    &:hover {
+      background-color: #0275d8 !important;
+    color: #fff!important;
+    }
   }
   @include activeHover;
   &, &:active, &:hover{
+    
+    border:0;
     text-decoration: none;
+  }
+
+  &:hover{
+    background: #EDECEB !important;
   }
 }
 
@@ -149,15 +177,27 @@
     margin-bottom: 5px;
   }
   .posts-item-title-link{
+    
+    font-size: 26px;
+    font-weight: 600;
+    color: #428bca;
+    margin-bottom: 0px;
     @include small{
       display: block;
       margin-bottom: $vmargin/2;
     }
-    color: $black;
+    //color: $black;
     &, &:active, &:hover{
       text-decoration: none;
     }
   }
+}
+
+
+.post-item-description {
+  margin-bottom: 5px;
+  display: block;
+  color:#4e4e4e;
 }
 
 .posts-categories{
@@ -178,6 +218,7 @@
 }
 
 .posts-item-meta{
+  font-size: 12px;
   @include medium-large{
     @include flex-center;
   }
@@ -245,7 +286,7 @@
     float: left;
   }
   display: block;
-  margin-right: $hmargin;
+  margin-right: 30px;
   img{
     display: block;
     height: 50px;

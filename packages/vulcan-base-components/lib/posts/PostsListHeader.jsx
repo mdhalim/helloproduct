@@ -7,10 +7,11 @@ const PostsListHeader = () => {
     <div>
       <div className="posts-list-header">
         <div className="posts-list-header-categories">
-          <Components.CategoriesList />
+          {/*<Components.CategoriesList />*/}
+          <Components.SearchForm/>
         </div>
-        <Components.PostsViews />
-        <Components.SearchForm/>
+        {/*<Components.PostsViews />*/}
+        
       </div>
     </div>
   )

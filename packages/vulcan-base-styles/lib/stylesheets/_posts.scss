@@ -11,6 +11,10 @@
   margin-bottom: $vmargin;
 }
 
+.posts-day-heading {
+  font-size: 1rem;
+}
+
 .posts-list-header-categories{
   @include small{
     margin: 0 auto;
@@ -93,6 +97,7 @@
   }
   //border-bottom: $border;
   padding: 10px 5px;
+  border-bottom: 1px solid #e8e8e8;
   // margin-bottom: 15px;
   &.posts-sticky{
     background: $light-yellow;

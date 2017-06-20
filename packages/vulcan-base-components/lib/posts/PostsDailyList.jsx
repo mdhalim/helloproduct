@@ -84,6 +84,7 @@ class PostsDailyList extends Component{
   }
 
   render() {
+    console.log(this.props.results,"hey there");
     const posts = this.props.results;
     const dates = this.getDateRange(this.state.afterLoaded, this.state.before);
 

@@ -28,7 +28,7 @@ class PostsPage extends Component {
           
           <Components.PostsItem post={post} currentUser={this.props.currentUser} />
 
-          {post.htmlBody ? <div className="posts-page-body" dangerouslySetInnerHTML={htmlBody}></div> : null}
+          {/*post.htmlBody ? <div className="posts-page-body" dangerouslySetInnerHTML={htmlBody}></div> : null*/}
 
           <Components.PostsCommentsThread terms={{postId: post._id, view: 'postComments'}} />
 

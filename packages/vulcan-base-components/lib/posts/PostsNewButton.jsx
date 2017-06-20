@@ -4,12 +4,15 @@ import { FormattedMessage, intlShape } from 'react-intl';
 import { Button } from 'react-bootstrap';
 
 const PostsNewButton = (props, context) => {
-
+   
+      failureComponent=<div><p className="posts-new-form-message"><FormattedMessage id="posts.sign_up_or_log_in_first" /></p><Components.AccountsLoginForm /></div>
+    
   const size = props.currentUser ? 'large' : 'small';
   const button = <Button className="posts-new-button" bsStyle="primary"><Components.Icon name="new"/> <FormattedMessage id="posts.new_post"/></Button>;
   return (
     <Components.ModalTrigger size={size} title={context.intl.formatMessage({id: "posts.new_post"})} component={button}>
-      <Components.PostsNewForm />
+      {/*<Components. />*/}
+      {failureComponent}
     </Components.ModalTrigger>
   )
 }
@@ -26,3 +29,9 @@ PostsNewButton.contextTypes = {
 };
 
 registerComponent('PostsNewButton', PostsNewButton, withCurrentUser);
+
+
+
+
+    //  failureComponent={<div><p className="posts-new-form-message"><FormattedMessage id="posts.sign_up_or_log_in_first" /></p><Components.AccountsLoginForm /></div>}
+    

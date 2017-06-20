@@ -22,6 +22,7 @@ const Header = (props, context) => {
             <Components.PostsNewButton/>
           </div>
           <div className="nav-user">
+            
             {!!props.currentUser ? <Components.UsersMenu/> : <Components.UsersAccountMenu/>}
           </div>
 

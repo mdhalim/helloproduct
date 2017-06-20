@@ -27,6 +27,17 @@ const UsersMenu = ({currentUser, client}) =>
   </div>
 
 
+   
+  //     failureComponent=<div><p className="posts-new-form-message"><FormattedMessage id="posts.sign_up_or_log_in_first" /></p><Components.AccountsLoginForm /></div>
+    
+  // const size = props.currentUser ? 'large' : 'small';
+  // const button = <Button className="posts-new-button" bsStyle="primary"><Components.Icon name="new"/>SignUp</Button>;
+  // return (
+  //   <Components.ModalTrigger size={size} title="Hi" component={button}>
+  //     {/*<Components. />*/}
+  //     {failureComponent}
+  //   </Components.ModalTrigger>
+  // )  
 UsersMenu.propsTypes = {
   currentUser: React.PropTypes.object,
   client: React.PropTypes.object,

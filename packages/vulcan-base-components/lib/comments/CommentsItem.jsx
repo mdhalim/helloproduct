@@ -57,10 +57,10 @@ class CommentsItem extends Component{
     return (
       <div className="comments-item-text">
         <div dangerouslySetInnerHTML={htmlBody}></div>
-        { showReplyButton ?
+        {/*{ showReplyButton ?
           <a className="comments-item-reply-link" onClick={this.showReply}>
             <Components.Icon name="reply"/> <FormattedMessage id="comments.reply"/>
-          </a> : null}
+          </a> : null}*/}
       </div>
     )
   }
@@ -98,10 +98,11 @@ class CommentsItem extends Component{
     return (
       <div className="comments-item" id={comment._id}>
         <div className="comments-item-body">
+          {/*{this.state.showEdit ? this.renderEdit() : this.renderComment()}*/}
           <div className="comments-item-meta">
-            <div className="comments-item-vote">
+            {/*<div className="comments-item-vote">
               <Components.Vote collection={Comments} document={this.props.comment} currentUser={this.props.currentUser}/>
-            </div>
+            </div>*/}
             <Components.UsersAvatar size="small" user={comment.user}/>
             <Components.UsersName user={comment.user}/>
             <div className="comments-item-date"><FormattedRelative value={comment.postedAt}/></div>
@@ -110,6 +111,7 @@ class CommentsItem extends Component{
                 <a className="comment-edit" onClick={this.showEdit}><FormattedMessage id="comments.edit"/></a>
               </div>
             </Components.ShowIf>
+            
           </div>
           {this.state.showEdit ? this.renderEdit() : this.renderComment()}
         </div>

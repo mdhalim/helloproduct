@@ -5,7 +5,10 @@
 }
 
 .posts-comments-thread-title{
-  margin-bottom: $vmargin;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .comments-list{
@@ -24,31 +27,34 @@
 .comments-item-body{
   @include border-radius;
   // max-width: 800px;
-  border: $border;
-  padding: $hmargin $vmargin;
+  //border: $border;
+  padding: 5px 0;
 }
 
 .comments-item-meta{
   @include flex-center;
-  margin-bottom: $vmargin;
+  margin-bottom: 10px;
   
   .comments-item-vote{
     margin-right: 10px;
   }
 
   .users-avatar{
-    margin-right: 5px;
+    margin-right: 10px;
+    
   }
   .users-name{
     margin-right: $hmargin;
+    font-size:14px;
   }
   .comments-item-date{
     margin-right: $hmargin;
     color: $medium-text;
-    font-size: $small-font;
+    font-size: 10px;
   }
   .comment-edit, .comment-delete {
     font-size: $small-font;
+    font-weight: 600;
   }
   .comment-delete {
     margin-left: 8px;
@@ -56,6 +62,7 @@
 }
 
 .comments-item-text{
+  margin-left: 30px;
 }
 
 .comments-edit-form, .comments-new-form{

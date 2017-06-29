@@ -1,16 +1,19 @@
 body{
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", sans-serif;
+  background: #f7f7f7;
 }
 
 .main, .footer, .header{
   margin-left: auto;
   margin-right: auto;
-  padding: 0 $hmargin;
+  padding: 40px;
   max-width: 970px;
+  background: #fff;
 }
 
 .main{
   margin-bottom: $vmargin;
+      border: 1px solid #efefef;
 }
 
 a{

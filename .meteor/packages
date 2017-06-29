@@ -9,9 +9,9 @@ vulcan:i18n-en-us
 
 ############ Accounts Packages ############
 
-#accounts-password
+accounts-password
 accounts-twitter
-#accounts-facebook
+accounts-facebook
 
 ############ Your Packages ############
 
@@ -20,3 +20,5 @@ accounts-twitter
 # example-forum
 # example-customization
 example-forum
+
+xavcz:vulcan-social-share

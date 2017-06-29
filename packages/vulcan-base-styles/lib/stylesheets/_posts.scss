@@ -12,7 +12,10 @@
 }
 
 .posts-day-heading {
-  font-size: 1rem;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 20px 0;
 }
 
 .posts-list-header-categories{
@@ -81,6 +84,9 @@
   width: 100%;
   background: $white;
   color: $active-color;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .posts-load-more-loading{
@@ -105,7 +111,7 @@
   }
 
   &:hover {
-    background: none repeat scroll 0% 0% #FCF5E2;
+    //background: none repeat scroll 0% 0% #FCF5E2;
   }
 }
 
@@ -131,9 +137,10 @@
   background: none repeat scroll 0% 0% #f2f2f2;
       box-shadow: 0px 1px 0px 0px rgba(83, 69, 64, 0.3), 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
   padding: 10px 10px;
-      width: 50px;
+      width: 30px;
     margin: 10px 25px 10px 0px;
-    height: 80px;
+    height: 50px;
+    font-size: 12px;
 
 
   .icon{
@@ -183,7 +190,7 @@
   }
   .posts-item-title-link{
     
-    font-size: 26px;
+    font-size: 18px;
     font-weight: 600;
     color: #428bca;
     margin-bottom: 0px;
@@ -200,9 +207,10 @@
 
 
 .post-item-description {
-  margin-bottom: 5px;
+  margin: 10px 0;
   display: block;
-  color:#4e4e4e;
+  color:#575757;
+  font-size:14px
 }
 
 .posts-categories{
@@ -306,9 +314,9 @@
 .posts-page{
   .posts-item{
     @include border-radius;
-    border: $border;
-    padding: $hmargin;
-    margin-bottom: $vmargin;
+    border: 0;
+    //padding: $hmargin;
+    padding: 45px 0;
   }
 }
 
@@ -346,4 +354,10 @@
   @include flex-center;
   justify-content: space-between;
   margin-bottom: $vmargin * 2;
+}
+
+
+
+.post-item-share-button--twitter {
+  
 }

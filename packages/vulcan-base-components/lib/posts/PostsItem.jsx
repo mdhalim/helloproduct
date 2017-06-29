@@ -60,7 +60,9 @@ class PostsItem extends Component {
                 <FormattedMessage id="comments.count" values={{count: post.commentCount}}/>
               </Link>
             </div>
-           
+            <Components.SocialButton type="twitter" post={post} className="post-item-share-button--twitter"/>
+            <Components.SocialButton type="facebook" post={post} className="post-item-share-button--facebook"/>
+            
             {this.props.currentUser && this.props.currentUser.isAdmin ? <Components.PostsStats post={post} /> : null}
             {Posts.options.mutations.edit.check(this.props.currentUser, post) ? this.renderActions() : null}
            

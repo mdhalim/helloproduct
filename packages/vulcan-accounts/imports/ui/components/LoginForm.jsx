@@ -331,21 +331,23 @@ export class AccountsLoginForm extends Tracker.Component {
         onClick: this.signOut.bind(this)
       });
     }
-
+    //label: this.context.intl.formatMessage({id: 'accounts.sign_up'}),
     if (this.showCreateAccountLink()) {
       loginButtons.push({
         id: 'switchToSignUp',
-        label: this.context.intl.formatMessage({id: 'accounts.sign_up'}),
+        label: 'Register to Helloproducts', 
         type: 'link',
         href: signUpPath,
         onClick: this.switchToSignUp.bind(this)
       });
     }
 
+
+    //label: this.context.intl.formatMessage({id: 'accounts.sign_in'}),
     if (formState == STATES.SIGN_UP || formState == STATES.PASSWORD_RESET) {
       loginButtons.push({
         id: 'switchToSignIn',
-        label: this.context.intl.formatMessage({id: 'accounts.sign_in'}),
+        label: 'Log in',
         type: 'link',
         href: loginPath,
         onClick: this.switchToSignIn.bind(this)
@@ -375,22 +377,22 @@ export class AccountsLoginForm extends Tracker.Component {
         onClick: this.switchToChangePassword.bind(this)
       });
     }
-
+    //label: this.context.intl.formatMessage({id: 'accounts.sign_up'}),
     if (formState == STATES.SIGN_UP) {
       loginButtons.push({
         id: 'signUp',
-        label: this.context.intl.formatMessage({id: 'accounts.sign_up'}),
+        label: 'Register',
         type: hasPasswordService() ? 'submit' : 'link',
         className: 'active',
         disabled: waiting,
         onClick: hasPasswordService() ? this.signUp.bind(this, {}) : null
       });
     }
-
+    //this.context.intl.formatMessage({id: 'accounts.sign_in'})
     if (this.showSignInLink()) {
       loginButtons.push({
         id: 'signIn',
-        label: this.context.intl.formatMessage({id: 'accounts.sign_in'}),
+        label: 'Log in',
         type: hasPasswordService() ? 'submit' : 'link',
         className: 'active',
         disabled: waiting,

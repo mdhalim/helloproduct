@@ -25,7 +25,6 @@ class PostsPage extends Component {
       return (
         <div className="posts-page">
           <Components.HeadTags url={Posts.getPageUrl(post, true)} title={post.title} image={post.thumbnailUrl} description={post.excerpt} />
-          
           <Components.PostsItem post={post} currentUser={this.props.currentUser} />
 
           {/*post.htmlBody ? <div className="posts-page-body" dangerouslySetInnerHTML={htmlBody}></div> : null*/}

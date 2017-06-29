@@ -17,6 +17,7 @@ Package.onUse(function (api) {
     'vulcan:voting@1.4.0',
     'vulcan:accounts@1.4.0',
     'vulcan:categories@1.4.0',
+    'xavcz:vulcan-social-share',
   ]);
 
   api.mainModule("lib/server.js", "server");

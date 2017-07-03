@@ -1,19 +1,19 @@
 {
   "public": {
-    "title": "HelloProducts",
+    "title": "HelloMakers",
     "tagline":"",
 
-    "logoUrl": "http://placekitten.com/250/80",
+    "logoUrl": "https://www.dropbox.com/s/pssa926jni9ocw1/hellomaker-logo-1.png?dl=0",
     "logoHeight": "80",
     "logoWidth": "250",
     "faviconUrl": "/favicon.ico",
 
-    "requirePostsApproval":false,
+    "requirePostsApproval":true,
     "requireViewInvite":false,
-    "requirePostInvite":true,
+    "requirePostInvite":false,
     "enableNewsletter":true,
-    "autoSubscribe":false,
-    "emailNotifications":true,
+    "autoSubscribe":true,
+    "emailNotifications":false,
     "postInterval": 20,
     "RSSLinksPointTo": "link",
     "commentInterval": 20,
@@ -29,7 +29,31 @@
 
     "googleAnalyticsId":"123foo",
     "useSegment": false,
-    "segmentWriteKey": "456bar"
+    "segmentWriteKey": "456bar",
+
+    "cloudinaryCloudName": "enigmabuild",
+    "cloudinaryPresets": {
+      "avatar": "sprdnbtu",
+      "posts": "gzppegay"
+    },
+
+    "cloudinaryFormats": [
+      {
+        "name": "small",
+        "width": 120,
+        "height": 90
+      },
+      {
+        "name":"square",
+        "width": 300,
+        "height": 300
+      },
+      {
+        "name": "medium",
+        "width": 480,
+        "height": 360
+      }
+    ]  
   },
 
   "defaultEmail": "hello@world.com",
@@ -43,6 +67,9 @@
   "newsletterTime": "14:20",
   "newsletterExcerptLength": 20,
   "postExcerptLength": 30,
+  "cloudinaryAPIKey": "162591911147886",
+  "cloudinaryAPISecret": "2eIBViIrOK-esowdfiOzQWjYTLQ",
+  "requireEmailVerification": true,
 
   "categories": [
     {

@@ -97,7 +97,7 @@ class EmbedlyURL extends Component {
 
   getDimensions() {
     const width = getSetting('thumbnailWidth', 80);
-    const height = getSetting('thumbnailHeight', 60);
+    const height = getSetting('thumbnailHeight', 80);
     const ratio = width/height;
     return {
       width,

@@ -21,6 +21,7 @@ class PostsPage extends Component {
       const post = this.props.document;
 
       const htmlBody = {__html: post.htmlBody};
+      console.log(post.screenShot);
 
       return (
         <div className="posts-page">
@@ -28,7 +29,9 @@ class PostsPage extends Component {
           <Components.PostsItem post={post} currentUser={this.props.currentUser} />
 
           {/*post.htmlBody ? <div className="posts-page-body" dangerouslySetInnerHTML={htmlBody}></div> : null*/}
-
+          <div className="post-screenshot">
+            <img src={post.screenShot}></img>
+          </div>
           <Components.PostsCommentsThread terms={{postId: post._id, view: 'postComments'}} />
 
         </div> 

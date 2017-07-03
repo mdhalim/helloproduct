@@ -335,7 +335,7 @@ export class AccountsLoginForm extends Tracker.Component {
     if (this.showCreateAccountLink()) {
       loginButtons.push({
         id: 'switchToSignUp',
-        label: 'Register to Helloproducts', 
+        label: 'Sign Up', 
         type: 'link',
         href: signUpPath,
         onClick: this.switchToSignUp.bind(this)

@@ -102,6 +102,7 @@ registerFragment(`
     htmlBody
     excerpt
     viewCount
+    screenShot
     clickCount
     # vulcan:users
     userId

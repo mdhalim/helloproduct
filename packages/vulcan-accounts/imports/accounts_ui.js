@@ -17,7 +17,7 @@ Accounts.ui._options = {
   requestPermissions: [],
   requestOfflineToken: {},
   forceApprovalPrompt: {},
-  requireEmailVerification: false,
+  requireEmailVerification: true,
   passwordSignupFields: 'USERNAME_AND_EMAIL',
   minimumPasswordLength: 7,
   loginPath: '/',

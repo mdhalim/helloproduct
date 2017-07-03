@@ -12,6 +12,7 @@ Package.onUse(function (api) {
   api.use([
     'vulcan:core@1.4.0',
     'vulcan:events@1.4.0',
+    'vulcan:forms-upload',
   ]);
 
   api.mainModule("lib/server.js", "server");

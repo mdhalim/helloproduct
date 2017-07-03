@@ -70,7 +70,7 @@ addStrings('en', {
   "posts.clear_thumbnail": "Clear Thumbnail",
   "posts.clear_thumbnail?": "Clear thumbnail?",
   "posts.enter_thumbnail_url": "Enter URL",
-  "posts.created_message": "Post created.",
+  "posts.created_message": "Post created. Awaiting Approval",
   "posts.rate_limit_error": "Please wait {value} seconds before posting again.",
   "posts.sign_up_or_log_in_first": "Please sign up or log in first.",
   "posts.postedAt": "Posted at",

@@ -30,6 +30,7 @@ Package.onUse(function (api) {
     'vulcan:api',
     'vulcan:rss',
     'vulcan:subscribe',
+   
 
     'vulcan:base-components',
     'vulcan:base-styles',

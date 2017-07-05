@@ -32,46 +32,60 @@ class PostsItem extends Component {
     if (post.sticky) postClass += " posts-sticky";
 
     return (
-      <div className={postClass}>
 
-        <div className="posts-item-vote">
-          <Components.Vote collection={Posts} document={post} currentUser={this.props.currentUser}/>
-        </div>
-
-        {post.thumbnailUrl ? <Components.PostsThumbnail post={post}/> : null}
-
-        <div className="posts-item-content">
-
-          <h3 className="posts-item-title">
-            <Link to={Posts.getPageUrl(post)} className="posts-item-title-link" >
-              {post.title}
-            </Link>
-            {this.renderCategories()}
-          </h3>
-
-          <span className="post-item-description">
-            {post.body.split(" ").slice(0,6).join(" ")+"..."}
-          </span>
-          <div className="posts-item-meta">
-            {post.user? <div className="posts-item-user"><Components.UsersAvatar user={post.body} size="small"/><Components.UsersName user={post.user}/></div> : null}
-            <div className="posts-item-date">{post.postedAt ? <FormattedRelative value={post.postedAt}/> : <FormattedMessage id="posts.dateNotDefined"/>}</div>
-            <div className="posts-item-comments">
-              <Link to={Posts.getPageUrl(post)}>
-                <FormattedMessage id="comments.count" values={{count: post.commentCount}}/>
-              </Link>
-            </div>
-            <Components.SocialButton type="twitter" post={post} className="post-item-share-button--twitter"/>
-            <Components.SocialButton type="facebook" post={post} className="post-item-share-button--facebook"/>
-            
-            {this.props.currentUser && this.props.currentUser.isAdmin ? <Components.PostsStats post={post} /> : null}
-            {Posts.options.mutations.edit.check(this.props.currentUser, post) ? this.renderActions() : null}
-           
+      <div className="post-init">
+        <div className="post-item-buttons">
+          <div className="posts-item-vote">
+            <Components.Vote collection={Posts} document={post} currentUser={this.props.currentUser}/>
           </div>
-
         </div>
 
-        {this.renderCommenters()}
+        <div className="post-item-meta-container">
+          <div className="posts-item-meta">
+                {post.user? <div className="posts-item-user"><Components.UsersAvatar user={post.body} size="small"/><Components.UsersName user={post.user}/></div> : null}
+                {/*<div className="posts-item-date">{post.postedAt ? <FormattedRelative value={post.postedAt}/> : <FormattedMessage id="posts.dateNotDefined"/>}</div>*/}
+                <div className="posts-item-comments">
+                  <div>
+                    <FormattedMessage id="comments.count" values={{count: post.commentCount}}/>
+                  </div>
+                </div>
+                <Components.SocialButton type="twitter" post={post} className="post-item-share-button--twitter"/>
+                <Components.SocialButton type="facebook" post={post} className="post-item-share-button--facebook"/>
+                
+                {this.props.currentUser && this.props.currentUser.isAdmin ? <Components.PostsStats post={post} /> : null}
+                {Posts.options.mutations.edit.check(this.props.currentUser, post) ? this.renderActions() : null}
+              
+          </div>
+        </div>
 
+
+      {/*this a div here*/}
+        <Link to={Posts.getPageUrl(post)} className={postClass}>
+
+          {post.thumbnailUrl ? <Components.PostsThumbnail post={post}/> : null}
+
+          <div className="posts-item-content">
+
+            <h3 className="posts-item-title">
+              <div className="posts-item-title-link" >
+                {post.title}
+              </div>
+              {this.renderCategories()}
+            </h3>
+
+            <span className="post-item-description">
+              {post.description}
+            </span>
+            
+
+          </div>
+        
+
+          {this.renderCommenters()}
+       
+        </Link>
+
+        
       </div>
     )
   }

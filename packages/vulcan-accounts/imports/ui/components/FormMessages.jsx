@@ -5,7 +5,7 @@ export class AccountsFormMessages extends Component {
   render () {
     const { messages = [], className = "messages", style = {} } = this.props;
     return messages.length > 0 && (
-      <div className="messages">
+      <div className="alert messages">
         {messages
           .filter(message => !('field' in message))
           .map(({ message, type }, i) =>

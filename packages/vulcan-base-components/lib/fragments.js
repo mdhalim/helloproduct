@@ -98,6 +98,7 @@ registerFragment(`
     createdAt
     sticky
     status
+    description
     body
     htmlBody
     excerpt

@@ -3,9 +3,9 @@ import React from 'react';
 import Posts from "meteor/vulcan:posts";
 
 const PostsThumbnail = ({post}) => 
-  <a className="posts-thumbnail" href={Posts.getLink(post)} target={Posts.getLinkTarget(post)}>
+  <div className="posts-thumbnail" href={Posts.getLink(post)} target={Posts.getLinkTarget(post)}>
     <span><img src={Posts.getThumbnailUrl(post)} /></span>
-  </a>
+  </div>
 
 PostsThumbnail.displayName = "PostsThumbnail";
 

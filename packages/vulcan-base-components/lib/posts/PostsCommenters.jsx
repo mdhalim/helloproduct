@@ -10,11 +10,11 @@ const PostsCommenters = ({post}) => {
         {_.take(post.commenters, 4).map(user => <Components.UsersAvatar key={user._id} user={user}/>)}
       </div>
       <div className="posts-commenters-discuss">
-        <Link to={Posts.getPageUrl(post)}>
+        <div>
           <Components.Icon name="comment" />
           <span className="posts-commenters-comments-count">{post.commentCount}</span>
           <span className="sr-only">Comments</span>
-        </Link>
+        </div>
       </div>
     </div>
   );

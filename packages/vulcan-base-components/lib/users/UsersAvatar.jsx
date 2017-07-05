@@ -32,7 +32,7 @@ const UsersAvatar = ({user, size, link}) => {
 
   const avatar = avatarUrl ? img : initials;
 
-  return link ? <Link style={aStyle} className="users-avatar" to={Users.getProfileUrl(user)}>{avatar}</Link> : avatar;
+  return link ? <span style={aStyle} className="users-avatar" >{avatar}</span> : avatar;
 
 }
 

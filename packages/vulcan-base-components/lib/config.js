@@ -47,3 +47,21 @@ Posts.addField({
     }
   }
 });
+
+
+Posts.addField([
+  /**
+    Count of the user's posts
+  */
+  {
+    fieldName: "description",
+    fieldSchema: {
+      type: String,
+      optional: false,
+      insertableBy: ['members'],
+    editableBy: ['members'],
+    viewableBy: ['guests'],
+    order: 30
+    }
+  }
+]);

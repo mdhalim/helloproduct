@@ -102,7 +102,7 @@
     @include flex-center;
   }
   //border-bottom: $border;
-  padding: 10px 5px;
+  padding: 15px 0 45px 80px;
   border-bottom: 1px solid #e8e8e8;
   // margin-bottom: 15px;
   &.posts-sticky{
@@ -111,7 +111,8 @@
   }
 
   &:hover {
-    //background: none repeat scroll 0% 0% #FCF5E2;
+    background: none repeat scroll 0% 0% #FCF5E2;
+    text-decoration: none;
   }
 }
 
@@ -316,7 +317,7 @@
     @include border-radius;
     border: 0;
     //padding: $hmargin;
-    padding: 45px 0;
+    //padding: 45px 0;
   }
 }
 
@@ -360,4 +361,24 @@
 
 .post-item-share-button--twitter {
   
+}
+
+
+.post-item-meta-container {
+      position: absolute;
+    margin:80px 80px 0;
+}
+
+
+.post-item-buttons {
+  position: absolute;
+  margin: 30px 15px 0;
+  .posts-item-vote {
+    margin: 0;
+    padding: 0;
+
+    .upvote-button {
+      margin: 0;
+    }
+  }
 }

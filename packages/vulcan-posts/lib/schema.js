@@ -89,6 +89,8 @@ const schema = {
     type: String,
     optional: true,
     max: 3000,
+    
+    placeholder: 'Uber for X',
     viewableBy: ['guests'],
     insertableBy: ['members'],
     editableBy: ['members'],

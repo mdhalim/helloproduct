@@ -65,3 +65,23 @@ Posts.addField([
     }
   }
 ]);
+
+
+Posts.addField([
+  /**
+    Count of the user's posts
+  */
+  {
+    fieldName: "Maker",
+    fieldSchema: {
+      type: String,
+      optional: false,
+      insertableBy: ['members'],
+    editableBy: ['members'],
+    viewableBy: ['guests'],
+    order: 30,
+    placeholder:"Maker Twitter Link",
+    
+    }
+  }
+]);

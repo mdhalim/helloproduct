@@ -74,25 +74,25 @@
   "categories": [
     {
       "name": "Education",
-      "description": "",
+      "description": "dasd",
       "order": 1,
       "slug": "education"
     }, 
     {
       "name": "Events",
-      "description": "",
+      "description": "asdasd",
       "order": 2,
       "slug": "events"
     }, 
     {
       "name": "Marketing",
-      "description": "",
+      "description": "asdad",
       "order": 3,
       "slug": "marketing"
     }, 
     {
       "name": "Sales",
-      "description": "",
+      "description": "asdasdsadasd",
       "order": 4,
       "slug": "sales"
     }

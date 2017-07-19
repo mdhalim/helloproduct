@@ -8,7 +8,7 @@ export class Buttons extends React.Component {
     return (
       <div className={ className }>
         {Object.keys(buttons).map((id, i) =>
-          <Components.AccountsButton {...buttons[id]} key={i} />
+          <Components.AccountsButton {...buttons[id]} key={i} num={id} />
         )}
       </div>
     );

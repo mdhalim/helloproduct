@@ -19,18 +19,19 @@ const UsersProfile = (props) => {
     const user = props.document;
 
     const terms = {view: "userPosts", userId: user._id};
-
+    console.log(user);
     return (
       <div className="page users-profile">
         <Components.HeadTags url={Users.getProfileUrl(user, true)} title={Users.getDisplayName(user)} />
-        <h2 className="page-title">{Users.getDisplayName(user)}</h2>
+        <h2 className="page-title username-accnt-page">{Users.getDisplayName(user)}</h2>
+        <small><Components.ShowIf check={Users.options.mutations.edit.check} document={user}>
+            <Link to={Users.getEditUrl(user)}><FormattedMessage id="users.edit_account"/></Link>
+          </Components.ShowIf></small>
         {user.htmlBio ? <div dangerouslySetInnerHTML={{__html: user.htmlBio}}></div> : null }
-        <ul>
+        <ul className="no-list-style margin-bottom-3">
           {user.twitterUsername ? <li><a href={"http://twitter.com/" + user.twitterUsername}>@{user.twitterUsername}</a></li> : null }
           {user.website ? <li><a href={user.website}>{user.website}</a></li> : null }
-          <Components.ShowIf check={Users.options.mutations.edit.check} document={user}>
-            <li><Link to={Users.getEditUrl(user)}><FormattedMessage id="users.edit_account"/></Link></li>
-          </Components.ShowIf>
+          
         </ul>
         <h3><FormattedMessage id="users.posts"/></h3>
         <Components.PostsList terms={terms} showHeader={false} />

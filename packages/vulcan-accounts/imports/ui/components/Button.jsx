@@ -14,8 +14,16 @@ export class AccountsButton extends React.Component {
       onClick
     } = this.props;
 
+
+    var a = className;
+
+    if(this.props.num=='switchToSignUp' || this.props.num=="switchToSignIn")
+      a = "btn btn-secondary";
+
+    console.log(a,this.props.num);
+
     return type === 'link' ? 
-      <a href="#" className={ className } onClick={ onClick } style={{marginRight: '10px'}}>{ label }</a> :
+      <a href="#" className={ a } onClick={ onClick } style={{marginRight: '10px'}}>{ label }</a> :
       <Button
         style={{marginRight: '10px'}}
         bsStyle="primary"

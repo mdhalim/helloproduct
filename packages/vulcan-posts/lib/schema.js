@@ -59,6 +59,7 @@ const schema = {
     insertableBy: ['members'],
     editableBy: ['members'],
     control: "text",
+    placeholder:"URL",
     order: 10
   },
   /**
@@ -72,7 +73,9 @@ const schema = {
     insertableBy: ['members'],
     editableBy: ['members'],
     control: "text",
-    order: 20
+    order: 20,
+    placeholder:"Title (Describe in One Line what the product Does)"
+    
   },
   /**
     Slug
@@ -89,13 +92,12 @@ const schema = {
     type: String,
     optional: true,
     max: 3000,
-    
-    placeholder: 'Uber for X',
     viewableBy: ['guests'],
     insertableBy: ['members'],
     editableBy: ['members'],
     control: "textarea",
-    order: 30
+    order: 30,
+    placeholder:"Description (Go on, decribe what the product does)"
   },
   /**
     HTML version of the post body

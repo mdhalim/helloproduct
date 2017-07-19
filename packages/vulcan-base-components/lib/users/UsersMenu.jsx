@@ -18,7 +18,7 @@ const UsersMenu = ({currentUser, client}) =>
         <LinkContainer to={`/users/${currentUser.slug}`}>
           <MenuItem className="dropdown-item" eventKey="1"><FormattedMessage id="users.profile"/></MenuItem>
         </LinkContainer>
-        <LinkContainer to={`/account`}>
+        <LinkContainer to={`/users/${currentUser.slug}/edit`}>
           <MenuItem className="dropdown-item" eventKey="2"><FormattedMessage id="users.edit_account"/></MenuItem>
         </LinkContainer>
         <MenuItem className="dropdown-item" eventKey="4" onClick={() => Meteor.logout(() => client.resetStore())}><FormattedMessage id="users.log_out"/></MenuItem>

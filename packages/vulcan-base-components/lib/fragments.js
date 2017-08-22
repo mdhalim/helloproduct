@@ -36,6 +36,7 @@ registerFragment(`
     bio
     htmlBio
     twitterUsername
+    FacebookProfile
     website
     groups
     karma
@@ -105,6 +106,7 @@ registerFragment(`
     viewCount
     screenShot
     clickCount
+    Maker
     # vulcan:users
     userId
     user {

@@ -37,3 +37,16 @@
     color: $white;
   }
 }
+
+
+.modal-lg {
+  @include small {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll; 
+    margin: 0;
+    padding:0;
+
+  }
+}

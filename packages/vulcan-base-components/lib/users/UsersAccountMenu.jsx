@@ -9,10 +9,13 @@ const UsersAccountMenu = ({state}) =>
 {  
 
       failureComponent=<div><p className="posts-new-form-message"><FormattedMessage id="posts.sign_up_or_log_in_first" /></p><Components.AccountsLoginForm /></div>
-   
+  
+
+      
    
   //const size = props.currentUser ? 'large' : 'small';
-  const button = <a><FormattedMessage id="users.sign_up_log_in"/></a>;
+  //const button = <a><FormattedMessage id="users.sign_up_log_in"/></a>;
+   const button = <a className="btn btn-secondary">LOGIN</a>;
   return (
     <Components.ModalTrigger size="small"  component={button}>
       {/*<Components. />*/}

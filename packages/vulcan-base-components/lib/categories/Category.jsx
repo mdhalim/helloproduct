@@ -19,7 +19,7 @@ class Category extends Component {
 
     const {category, index, router} = this.props;
 
-    // const currentQuery = router.location.query;
+    const currentQuery = router.location.query;
     const currentCategorySlug = router.location.query.cat;
     const newQuery = _.clone(router.location.query);
     newQuery.cat = category.slug;

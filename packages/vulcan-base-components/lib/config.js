@@ -61,7 +61,8 @@ Posts.addField([
       insertableBy: ['members'],
     editableBy: ['members'],
     viewableBy: ['guests'],
-    order: 30
+    order: 30,
+    placeholder: "One line about your product."
     }
   }
 ]);
@@ -80,8 +81,29 @@ Posts.addField([
     editableBy: ['members'],
     viewableBy: ['guests'],
     order: 30,
-    placeholder:"Maker Twitter Link",
+    placeholder:"Twitter handle of the product maker",
     
     }
   }
 ]);
+Users.addField([
+  /**
+    Count of the user's posts
+  */
+  {
+    fieldName: "FacebookProfile",
+    fieldSchema: {
+      type: String,
+      optional: false,
+      insertableBy: ['members'],
+    editableBy: ['members'],
+    viewableBy: ['guests'],
+    //order:1,
+    placeholder:"Facebook Profile URL",
+    
+    }
+  }
+]);
+
+
+

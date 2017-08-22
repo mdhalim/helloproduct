@@ -20,6 +20,8 @@ class NewsletterButton extends Component {
       [mutationName]: mutationToTrigger, // dynamic 'mutationToTrigger' variable based on the mutationName (addUserNewsletter or removeUserNewsletter)
     } = this.props;
     
+
+    console.log(mutationToTrigger({userId: user._id}))
     try {
       const mutationResult = await mutationToTrigger({userId: user._id});
       

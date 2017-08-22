@@ -59,8 +59,9 @@ const schema = {
     insertableBy: ['members'],
     editableBy: ['members'],
     control: "text",
-    placeholder:"URL",
-    order: 10
+    placeholder:"URL with http:// or https://",
+    order: 10,
+    
   },
   /**
     Title
@@ -74,7 +75,7 @@ const schema = {
     editableBy: ['members'],
     control: "text",
     order: 20,
-    placeholder:"Title (Describe in One Line what the product Does)"
+    placeholder:"Name of your product"
     
   },
   /**
@@ -97,6 +98,7 @@ const schema = {
     editableBy: ['members'],
     control: "textarea",
     order: 30,
+    hidden: true,
     placeholder:"Description (Go on, decribe what the product does)"
   },
   /**

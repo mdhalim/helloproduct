@@ -104,6 +104,7 @@
   //border-bottom: $border;
   padding: 15px 0 45px 80px;
   border-bottom: 1px solid #e8e8e8;
+  @include flex-center;
   // margin-bottom: 15px;
   &.posts-sticky{
     background: $light-yellow;
@@ -114,6 +115,13 @@
     background: none repeat scroll 0% 0% #FCF5E2;
     text-decoration: none;
   }
+
+  @include small{
+    //float: right;    
+    padding: 15px 45px 15px 0px
+  }
+
+
 }
 
 .posts-item-vote{
@@ -248,6 +256,7 @@
 .posts-item-user{
   @include small{
     margin-bottom: $vmargin/2;
+    display: inline-block;
   }
   @include flex-center;
 }
@@ -255,6 +264,7 @@
 .posts-item-date, .posts-item-comments{
   @include small{
     margin-bottom: $vmargin/2;
+       display: inline-block;
   }
   color: $medium-text;
 }
@@ -263,6 +273,7 @@
   @include small{
     margin-bottom: $vmargin/2;
     display: inline-block;
+    
   }
   @include border;
   @include border-radius;
@@ -360,12 +371,33 @@
 
 
 .post-item-share-button--twitter {
-  
+  margin-right:10px;
 }
 
+.post-item-share-button--twitter:after {
+  content: 'SHARE';
+  font-weight:600;
+  font-size:14px;
+}
+
+.post-item-share-button--facebook {
+
+}
+
+.post-item-share-button--facebook:after {
+  content: 'SHARE';
+  font-weight:600;
+  font-size:14px;
+}
 
 .post-item-meta-container {
-      position: absolute;
+    position: absolute;
+    @include small{
+      margin: 90px 15px 0;
+      display: none;
+    }
+
+
     margin:80px 160px 0;
 }
 
@@ -381,4 +413,84 @@
       margin: 0;
     }
   }
+
+
+  @include small {
+     right: 10px;
+     margin: 15px 15px 0;
+  }
 }
+
+
+
+  .control-label {
+    font-weight: 600;
+  }
+
+
+
+.post-thumbnail-container {
+  width:50px!important;
+  background: url(https://cdn.tutsplus.com/net/uploads/legacy/958_placeholders/placehold.gif)
+}
+
+
+.hide-on-small {
+  @include small {
+    display: none!important;
+  }
+}
+
+.post-maker-list-ul {
+  list-style: none;
+  margin: 0px 0 20px;
+  padding: 0px 160px 20px;
+  border-bottom: 1px solid #e5e5e5;
+
+  @include small {
+    padding: 0px 0px 20px;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 30px;
+
+    @include small {
+      margin-right: 15px
+    }
+  }
+
+  .maker-headline {
+    font-weight: 600;
+    font-size:14px;
+  }
+
+  img {
+    width:20px;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+}
+
+
+
+.posts-daily .post-item-meta-container--sticky {
+  display: none;
+}
+.post-item-meta-container--sticky {
+  display: none;
+
+  @include small {
+    display:block;
+    margin-bottom: 20px;
+  }
+
+}
+
+.post-screenshot {
+  img {
+    width: 100%;
+  }
+}
+
+

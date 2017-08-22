@@ -9,6 +9,10 @@ body{
   padding: 40px;
   max-width: 970px;
   background: #fff;
+
+  @include small {
+    padding:20px;
+  }
 }
 
 .main{

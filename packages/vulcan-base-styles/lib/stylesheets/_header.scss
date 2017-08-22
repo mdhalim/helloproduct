@@ -16,6 +16,9 @@
 .logo{
   @include small{
     text-align: center;
+    img {
+      width: 100%;
+    }
   }
   @include medium-large{
     display: flex;

@@ -3,12 +3,12 @@
     "title": "HelloMakers",
     "tagline":"",
 
-    "logoUrl": "https://www.dropbox.com/s/pssa926jni9ocw1/hellomaker-logo-1.png?dl=0",
+    "logoUrl": "http://res.cloudinary.com/enigmabuild/image/upload/v1500752597/helllomakers-logo_ptcehn.jpg",
     "logoHeight": "80",
-    "logoWidth": "250",
+    "logoWidth": "200",
     "faviconUrl": "/favicon.ico",
 
-    "requirePostsApproval":true,
+    "requirePostsApproval":false,
     "requireViewInvite":false,
     "requirePostInvite":false,
     "enableNewsletter":true,
@@ -24,10 +24,10 @@
     "language": "en",
     "locale": "en",
 
-    "twitterAccount": "foo",
-    "facebookPage": "http://facebook.com/foo",
+    "twitterAccount": "HelloMeets",
+    "facebookPage": "http://facebook.com/hellomeets",
 
-    "googleAnalyticsId":"123foo",
+    "googleAnalyticsId":"UA-63707917-3",
     "useSegment": false,
     "segmentWriteKey": "456bar",
     "requireEmailVerification": true,
@@ -57,13 +57,13 @@
     ]  
   },
 
-  "defaultEmail": "hello@world.com",
+  "defaultEmail": "products@hellomeets.com",
   "mailUrl": "smtp://postmaster%40foo.mailgun.org:foo123@smtp.mailgun.org:587/",
   "scoreUpdateInterval": "30",
 
   "embedlyKey":"123foo",
-  "mailChimpAPIKey": "123foo",
-  "mailChimpListId": "123foo",
+  "mailChimpAPIKey": "abd62afeb5750f63b4d0e8a778d941ed-us16",
+  "mailChimpListId": "31435",
   "newsletterFrequency": [1,2,3,4,5,6,7],
   "newsletterTime": "14:20",
   "newsletterExcerptLength": 20,
@@ -74,25 +74,25 @@
   "categories": [
     {
       "name": "Education",
-      "description": "dasd",
+      "description": "",
       "order": 1,
       "slug": "education"
     }, 
     {
       "name": "Events",
-      "description": "asdasd",
+      "description": "",
       "order": 2,
       "slug": "events"
     }, 
     {
       "name": "Marketing",
-      "description": "asdad",
+      "description": "",
       "order": 3,
       "slug": "marketing"
     }, 
     {
       "name": "Sales",
-      "description": "asdasdsadasd",
+      "description": "",
       "order": 4,
       "slug": "sales"
     }

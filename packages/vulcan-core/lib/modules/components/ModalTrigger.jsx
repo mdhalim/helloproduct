@@ -30,7 +30,7 @@ class ModalTrigger extends Component {
   }
 
   render() {
-    // debugger
+    
     const triggerComponent = this.props.component ? React.cloneElement(this.props.component, { onClick: this.openModal }) : <a href="#" onClick={this.openModal}>{this.props.label}</a>;
     const childrenComponent = React.cloneElement(this.props.children, {closeModal: this.closeModal});
     console.log(childrenComponent)

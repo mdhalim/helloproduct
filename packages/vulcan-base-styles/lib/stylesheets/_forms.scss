@@ -115,4 +115,9 @@ div.ReactTags__suggestions mark{
 
 .posts-new-form {
   width:550px;
+  @include small {
+    width:100%;
+  }
 }
+
+

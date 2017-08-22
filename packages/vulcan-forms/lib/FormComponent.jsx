@@ -49,9 +49,9 @@ class FormComponent extends Component {
 
       switch (this.props.control) {
         case "text":
-          return <Input         {...properties} type="text" />;
+          return <Input         {...properties} type="text" layout="vertical"/>;
         case "textarea":
-          return <Textarea      {...properties} />;
+          return <Textarea      {...properties} layout="vertical"/>;
         case "checkbox":
           return <Checkbox      {...properties} />;
         case "checkboxgroup":
@@ -63,9 +63,9 @@ class FormComponent extends Component {
           properties.options = [{label: this.context.intl.formatMessage({id: "forms.select_option"}), disabled: true}, ...properties.options];
           return <Select        {...properties} />;
         case "datetime":
-          return <DateTime      {...properties} />;
+          return <DateTime      {...properties} layout="vertical"/>;
         default:
-          return <Input         {...properties} type="text" />;
+          return <Input         {...properties} type="text" layout="vertical" />;
       }
 
     }

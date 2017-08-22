@@ -28,8 +28,9 @@ const UsersProfile = (props) => {
             <Link to={Users.getEditUrl(user)}><FormattedMessage id="users.edit_account"/></Link>
           </Components.ShowIf></small>
         {user.htmlBio ? <div dangerouslySetInnerHTML={{__html: user.htmlBio}}></div> : null }
-        <ul className="no-list-style margin-bottom-3">
+        <ul className="no-list-style margin-bottom-3 social-links">
           {user.twitterUsername ? <li><a href={"http://twitter.com/" + user.twitterUsername}>@{user.twitterUsername}</a></li> : null }
+          {user.FacebookProfile ? <li><i class="fa fa-facebook" aria-hidden="true"></i><a href={user.FacebookProfile}>FACEBOOK</a></li> : null }
           {user.website ? <li><a href={user.website}>{user.website}</a></li> : null }
           
         </ul>

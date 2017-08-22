@@ -121,7 +121,7 @@ class EmbedlyURL extends Component {
   renderNoThumbnail() {
     return (
       <div className="embedly-thumbnail">
-        <div style={{width: `${Math.round(60 * this.getDimensions().ratio)}px`, height: `60px`}} onClick={this.editThumbnail} className="embedly-thumbnail-placeholder">
+        <div style={{width: `${Math.round(60 * this.getDimensions().ratio)}px`, height: `60px`, margin: `20px`}} onClick={this.editThumbnail} className="embedly-thumbnail-placeholder">
           <Components.Icon name="image" />
           <FormattedMessage id="posts.enter_thumbnail_url"/>
         </div>
@@ -149,15 +149,15 @@ class EmbedlyURL extends Component {
 
     return (
       <div className="form-group row embedly-form-group" style={wrapperStyle}>
-        <label className="control-label col-sm-3">{this.props.label}</label>
-        <div className="col-sm-9 embedly-form-control">
+        {/* <label className="control-label col-sm-3">{this.props.label}</label> */}
+        <div className="col-sm-12 embedly-form-control">
           <div className="embedly-url-field">
             <Input
               {...rest}
               onBlur={this.handleBlur}
               type="text"
               ref={ref => this.input = ref}
-              layout="elementOnly"
+              layout="vertical"
             />
             <div className="embedly-url-field-loading" style={loadingStyle}>
               <Components.Loading />

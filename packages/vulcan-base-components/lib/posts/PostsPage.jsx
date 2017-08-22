@@ -7,6 +7,15 @@ import { FormattedMessage } from 'react-intl';
 
 class PostsPage extends Component {
   
+  generateTwitterProfilePic(data) {
+    console.log(data)
+    return 'https://twitter.com/'+data+'/profile_image?size=original '
+  }
+
+  generateTwitterlink(data) {
+    console.log(data)
+    return 'https://twitter.com/'+data
+  }
   render() {
     if (this.props.loading) {
       
@@ -27,7 +36,29 @@ class PostsPage extends Component {
         <div className="posts-page">
           <Components.HeadTags url={Posts.getPageUrl(post, true)} title={post.title} image={post.thumbnailUrl} description={post.excerpt} />
           <Components.PostsItem post={post} currentUser={this.props.currentUser} />
+          <div className="post-maker-list">
+            <ul className="post-maker-list-ul">
+              <li>
+                  <a href={Posts.getPageUrl(post, true)} className="btn btn-primary" style={{
+                    'fontSize': '12px',
+                    'padding': '5px 15px'
+                  }}>GET WEBSITE</a>
+              </li>
 
+
+              <li className="hide-on-small">
+                  <span className="maker-headline">Posted By</span>
+              </li>
+              <li className="hide-on-small">
+                
+                <Components.UsersAvatar user={post.user} size="small"/>
+                   <Components.UsersName user={post.user}/>
+                {/* <img src={this.generateTwitterProfilePic(post.Maker)} />
+                <a href={this.generateTwitterlink(post.Maker)} >@{post.Maker}</a> */}
+              </li>
+              
+            </ul>
+          </div>
           {/*post.htmlBody ? <div className="posts-page-body" dangerouslySetInnerHTML={htmlBody}></div> : null*/}
           <div className="post-screenshot">
             <img src={post.screenShot}></img>
